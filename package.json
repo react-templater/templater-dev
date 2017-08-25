@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/react-templater/templater-dev/issues"
   },
-  "homepage": "https://github.com/react-templater/templater-dev#readme"
+  "homepage": "https://github.com/react-templater/templater-dev#readme",
+  "devDependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "path": "^0.12.7"
+  }
 }

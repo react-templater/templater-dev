@@ -1,18 +1,13 @@
 {
-  "name": "templater-dev",
+  "name": "My New React Template",
   "version": "1.0.0",
-  "description": "React Templater",
+  "description": "New React Templater Project",
   "main": "index.js",
   "scripts": {
     "webpack": "./node_modules/.bin/webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1"
-    "start": "nodemon ./server/server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/react-templater/templater-dev.git"
-  },
-  "author": "Jon Roach, Gian Cui, Alex Hong",
+  "author": "YOUR NAME HERE!!",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/react-templater/templater-dev/issues"

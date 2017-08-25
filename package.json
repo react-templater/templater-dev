@@ -4,9 +4,14 @@
   "description": "React Templater",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "webpack": "./node_modules/.bin/webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./server/server.js"
+=======
+    "start": "nodemon ./server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+>>>>>>> ffe9d43b392141091a3f5ceffb6356162dd28a2a
   },
   "repository": {
     "type": "git",
@@ -18,6 +23,7 @@
     "url": "https://github.com/react-templater/templater-dev/issues"
   },
   "homepage": "https://github.com/react-templater/templater-dev#readme",
+<<<<<<< HEAD
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
@@ -50,5 +56,11 @@
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1",
     "zip-folder": "^1.0.0"
+=======
+  "devDependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "path": "^0.12.7"
+>>>>>>> ffe9d43b392141091a3f5ceffb6356162dd28a2a
   }
 }

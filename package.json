@@ -20,6 +20,9 @@
   "devDependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
-    "path": "^0.12.7"
+    "install": "^0.10.1",
+    "npm": "^5.3.0",
+    "path": "^0.12.7",
+    "zip-folder": "^1.0.0"
   }
 }

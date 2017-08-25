@@ -16,7 +16,7 @@ app.get('/build/bundle.js', (req, res) => {
 })
 
 app.get('/download', () => {
-    res.downloadFile(path.join(__dirname, './../store/'))
+    res.downloadFile(path.join(__dirname, './../store/template/index.html'))
 })
 
 app.listen(3000, () => {

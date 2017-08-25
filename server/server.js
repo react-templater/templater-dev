@@ -8,16 +8,16 @@ let zipper = require('./zipper');
 app.use(bodyParse());
 app.use(express.static('build'));
 
-// app.get("/", (req,res) => {
-//     res.sendFile(path.join(__dirname, './../index.html'));
-// });
+app.get("/", (req,res) => {
+    res.sendFile(path.join(__dirname, './../index.html'));
+});
 
 app.get('/build/bundle.js', (req, res) => {
     // res.sendFile(path.join(__dirname, './../build/bundle.js'));
 });
 
-// app.get('/download', zipper, (req,res) => {
-app.get('/', zipper, (req,res) => {
+app.get('/download', zipper, (req,res) => {
+// app.get('/', zipper, (req,res) => {
     res.download(path.join(__dirname, './templateStore/zippedFile.zip'));
 });
 

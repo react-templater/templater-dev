@@ -1,0 +1,19 @@
+{
+  "name": "templater-dev",
+  "version": "1.0.0",
+  "description": "React Templater",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-templater/templater-dev.git"
+  },
+  "author": "Jon Roach, Gian Cui, Alex Hong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/react-templater/templater-dev/issues"
+  },
+  "homepage": "https://github.com/react-templater/templater-dev#readme"
+}

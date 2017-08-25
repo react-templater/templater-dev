@@ -48,11 +48,10 @@ class App extends Component {
   }
 
   handleDownload = (e) => {
-    //uncomment this to make connections
-    // axios.post('url', this.state.download)
-    //   .then(() => {
+    axios.post('./download', this.state.download)
+      .then(() => {
 
-    //   });
+      });
     console.log(this.state.download);
   }
 

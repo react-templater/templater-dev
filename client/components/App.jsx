@@ -47,13 +47,21 @@ class App extends Component {
     }
   }
 
+  //This function downloads the zipped file.
   handleDownload = (e) => {
-    //uncomment this to make connections
-    // axios.post('url', this.state.download)
-    //   .then(() => {
+<<<<<<< HEAD
+    axios.post('./download', this.state.download)
+      .then(() => {
 
-    //   });
+      });
     console.log(this.state.download);
+=======
+    //uncomment this to make post request
+    // axios.post('url', this.state.download)
+    //   .then((response) => {
+    //     console.log('Thanks for downloading!');
+    //   });
+>>>>>>> 9454ce8f36512ae6ad331728d05fdbea5a19ca04
   }
 
   render() {

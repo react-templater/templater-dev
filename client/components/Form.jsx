@@ -15,6 +15,8 @@ class Form extends Component {
         <input type="checkbox" name="components" value={this.props.components} onChange={ this.props.handleFormChange}/>
         <h3>Select Style</h3>
         <input type="checkbox" name="style" value={this.props.style} onChange={ this.props.handleFormChange} />
+        <h3>Select Assets</h3>
+        <input type="checkbox" name="assets" value={this.props.assets} onChange={ this.props.handleFormChange} />
         <h3>Select Build</h3>
         <input type="checkbox" name="build" value={this.props.build} onChange={ this.props.handleFormChange} />
         <Button click={this.props.clickDownload} onChange={ this.props.handleFormChange} />

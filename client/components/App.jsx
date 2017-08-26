@@ -41,17 +41,22 @@ class App extends Component {
       downloadClone.style = e.target.checked;
       this.setState({download: downloadClone});
     }
+    if (e.target.name === 'assets') {
+      downloadClone.assets = e.target.checked;
+      this.setState({download: downloadClone});
+    }
     if (e.target.name === 'build') {
       downloadClone.build = e.target.checked;
       this.setState({download: downloadClone});
     }
   }
-
+  
   //This function downloads the zipped file.
   handleDownload = (e) => {
-    axios.post('http://localhost:3000/download', {name: 'John'})
+    axios.post('http://localhost:3000/', this.state.download)
       .then((response) => {
-        console.log('Thanks for downloading!');
+        console.log('this is response');
+        window.location = '/download';
       });
   }
 

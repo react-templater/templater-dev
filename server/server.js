@@ -35,6 +35,8 @@ app.post('/', createFolder, zipper, (req, res) => {
   // res.redirect('http://localhost:3000/download');
 })
 
+app.use('/assets', express.static('build'));
+
 app.listen(3000, () => {
     console.log('now listening on 3000!');
 }); 

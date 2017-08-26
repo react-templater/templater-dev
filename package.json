@@ -40,7 +40,6 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "sass-loader": "^6.0.6",
-    "express": "^4.15.4",
     "find-remove": "^1.0.1",
     "recursive-copy": "^2.0.6",
     "style-loader": "^0.18.2",

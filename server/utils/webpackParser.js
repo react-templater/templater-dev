@@ -41,17 +41,18 @@ const imageLoaderRule = {
 // -------------------------------------------------------------------------------
 
 function webpackParser(options) {
-  fs.readFile('./webpackTemplate.js', 'utf8', (err, data) => {
+  fs.readFile('./server/utils/templates/webpackTemplate.js', 'utf8', (err, data) => {
     if (err) throw err;
-    fs.writeFile('./webpack.config.js', data, (writeErr) => {
+    fs.writeFile('./store/test/testDestWebpack.js', data, (writeErr) => {
       if (writeErr) throw writeErr;
-      fs.readFile('./webpack.json', 'utf8', (err2, data1) => {
+      fs.readFile('./server/utils/templates/webpack.json', 'utf8', (err2, data1) => {
         if (err2) throw err;
         const webpackSettings = JSON.parse(data1);
         webpackSettings.output.filename = options.outputFileName || webpackSettings.output.filename;
         if (options.useSass) webpackSettings.module.rules[1] = sassRule;
         if (options.webpackImageLoader) webpackSettings.module.rules.push(imageLoaderRule)
-        fs.appendFile('./webpack.config.js', JSON.stringify(webpackSettings, null, 1), (err1) => {
+        // TODO: Check out a way to prettify the output. Currently output is not well formatted
+        fs.appendFile('./store/test/testDestWebpack.js', JSON.stringify(webpackSettings, null, 1), (err1) => {
           if (err1) throw err1;
           console.log('filelistAsync complete');
         });
@@ -59,5 +60,7 @@ function webpackParser(options) {
     });
   });
 }
+
+webpackParser({ useSass: true, webpackImageLoader: true })
 
 module.exports = webpackParser;

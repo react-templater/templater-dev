@@ -3,10 +3,9 @@ const app = express();
 const path = require('path');
 const bodyParse = require('body-parser');
 const zipper = require('./zipper');
-const templateController = require('./templateController')
-const createFolder = require('./folderBuilder.js');
-const remover = require('./remover.js');
-const moduleController = require('./moduleController.js')
+const templateController = require('./templateController');
+const moduleController = require('./moduleController.js');
+const settingsController = require('./settingsController');
 
 app.use(bodyParse());
 app.use(express.static('build'));
@@ -21,20 +20,22 @@ app.get('/build/bundle.js', (req, res) => {
 
 app.get('/download', (req, res) => {
   res.download(path.join(__dirname, './templateStore/zippedFile.zip'));
-})
+});
 
-app.post('/', 
+app.post('/',
   templateController,
   moduleController.assets,
   moduleController.components,
   moduleController.style,
+  settingsController.packageParser,
+  settingsController.webpackParser,
   zipper,
-  (req, res) => {
-  res.send('this is the response');
-})
+  (req, res) => res.send('this is the response'),
+);
 
 app.use('/assets', express.static('build'));
 
 app.listen(3000, () => {
-    console.log('now listening on 3000!');
-}); 
+  console.log('now listening on 3000!');
+});
+

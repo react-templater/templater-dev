@@ -7,31 +7,47 @@ module.exports = {
       { loader: "sass-loader" }
     ],
   },
+  webpackImageLoader: {
+    loader: 'image-webpack-loader',
+    options: {
+      query: {
+        mozjpeg: {
+          progressive: true,
+        },
+        gifsicle: {
+          interlaced: true,
+        },
+        optipng: {
+          optimizationLevel: 7,
+        },
+      },
+    },
+  },
   imageLoaderRule: {
     test: "/\\.(gif|png|jpe?g|svg)$/i",
     loaders: [
       {
         loader: 'file-loader',
         options: {
-          name: 'assets/[name].[ext]'
+          name: 'assets/[name].[ext]',
         },
-      },
-      {
-        loader: 'image-webpack-loader',
-        options: {
-          query: {
-            mozjpeg: {
-              progressive: true,
-            },
-            gifsicle: {
-              interlaced: true,
-            },
-            optipng: {
-              optimizationLevel: 7,
-            },
-          },
-        },
-      },
+      }
+      // {
+      //   loader: 'image-webpack-loader',
+      //   options: {
+      //     query: {
+      //       mozjpeg: {
+      //         progressive: true,
+      //       },
+      //       gifsicle: {
+      //         interlaced: true,
+      //       },
+      //       optipng: {
+      //         optimizationLevel: 7,
+      //       },
+      //     },
+      //   },
+      // },
     ],
   },
 };

@@ -12,17 +12,6 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // download: {
-      //   name: 'name',
-      //   author: 'author',
-      //   outputFileName: 'bundle.js',
-      //   useSass: false,
-      //   fileLoader: false,
-      //   webpackImageLoader: false,
-      //   assets: false,
-      //   components: false,
-      //   style: false,
-      // },
       download: {
         packageJson: {
           name: 'name',
@@ -93,12 +82,11 @@ class App extends Component {
   
   //This function downloads the zipped file.
   handleDownload = (e) => {
-    console.log(this.state.download);
-    // axios.post('http://localhost:3000/', this.state.download)
-    //   .then((response) => {
-    //     console.log('this is response');
-    //     window.location = '/download';
-    //   });
+    axios.post('http://localhost:3000/', this.state.download)
+      .then((response) => {
+        console.log('this is response');
+        window.location = '/download';
+      });
   }
 
   //This clears the text input field when it's in focus
@@ -112,14 +100,6 @@ class App extends Component {
   toggleModal = (e) => {
     console.log('clicked');
     this.setState({ displayCtaModal: { display: 'none' } });
-    console.log('this is the state', this.state);
-    // if (styleClone.displayCtaModal.display === 'none') {
-    //   styleClone.displayCtaModal = { display: 'block' };
-    //   this.setState({ style: styleClone });
-    // } else {
-    //   styleClone.displayCtaModal = { display: 'none' };
-    //   this.setState({ style: styleClone });
-    // }
   }
 
   render() {

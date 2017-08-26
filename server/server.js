@@ -17,8 +17,10 @@ app.get('/build/bundle.js', (req, res) => {
   res.sendFile(path.join(__dirname, '../build/bundle.js'));
 });
 
-app.get('/download', zipper, (req,res) => {
-  res.download(path.join(__dirname, './templateStore/zippedFile.zip'));
+app.post('/download', (req,res) => {
+  console.log('Get request received!');
+  console.log(req.body);
+  res.end();
 });
 
 

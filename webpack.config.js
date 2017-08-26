@@ -42,21 +42,21 @@ module.exports = {
               name: 'assets/[name].[ext]'
             }
           },
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              query: {
-                mozjpeg: {
-                  progressive: true,
-                },
-                gifsicle: {
-                  interlaced: true,
-                },
-                optipng: {
-                  optimizationLevel: 7,
-                },
-              }
-            },
+           {		         
+            loader: 'image-webpack-loader',		
+            options: {		
+              query: {		
+                mozjpeg: {		
+                  progressive: true,		
+                },		
+                gifsicle: {		
+                  interlaced: true,		
+                },		
+                optipng: {		
+                  optimizationLevel: 7,		
+                },		
+              }		
+            },		
           }
         ]
       }
